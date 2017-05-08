@@ -119,7 +119,7 @@ print "post sort arr", arr.sort()
 x = np.array([[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]])
 y = np.array([[6.0, 23.0], [-1, 7], [8, 9]])
 
-print "x*y", #x * y #error
+print "x*y",  # x * y #error
 print "np.dot(x,y)", x.dot(y)
 
 
@@ -138,10 +138,10 @@ solv AX=B 解
 lstsq Ax=b最小二乘
 '''
 
-#随机数生成
+# 随机数生成
 
-#生成标准正态分布4X4矩阵
-sample = np.random.normal(size=(4,4))
+# 生成标准正态分布4X4矩阵
+sample = np.random.normal(size=(4, 4))
 
 '''
 seed
@@ -157,5 +157,4 @@ chisquare
 gamma
 uniform
 
-
-
+'''
