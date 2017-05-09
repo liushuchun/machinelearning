@@ -13,7 +13,7 @@ def sigmoid(inX):
     return 1.0 / (1 + np.exp(-inX))
 
 
-def logistic_regression(train, labelY, alpha=0.2, maxIter=1000, opt_method="graddesc"):
+def logistic_regression(train, labelY, alpha=0.01, maxIter=1000, opt_method="graddesc"):
 
     start = time.time()
     train_x = np.mat(train)
@@ -38,6 +38,23 @@ def logistic_regression(train, labelY, alpha=0.2, maxIter=1000, opt_method="grad
             raise NameError("Not Support Optimize Method types")
 
     print "Congratulations,training complete"
+
+    return weights
+
+
+def stock_grad_ascent(train, label, maxIter=500):
+    train_matrix = np.mat(train)
+    label_matrix = np.mat(label)
+    m, n = np.shape(train_matrix)
+    weights = np.ones(n)
+    for j in range(maxIter):
+        dataIndex = range(m)
+        for i in range(m):
+            alpha = 4.0 / (1.0 + j + i) + 0.01
+            randIndex = int(np.random.uniform(0, len(dataIndex)))
+            h = sigmoid(np.sum(data_matrix[randIndex] * weights))
+            err = label_matrix[randIndex] - h
+            weights = weights + alpha * err * data_matrix[randIndex]
 
     return weights
 
