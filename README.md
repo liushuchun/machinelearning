@@ -1,22 +1,23 @@
-# 机器学习练习
+## 机器学习练习
 ===============
-游乐园
-
 
 总共有十个部分:
 
-## 1.numpy,pandas
+### 1.numpy,pandas
 
-## 2.logistic regression
+### 2.logistic regression
 
-## 3.decision tree & random forest 
+### 3.decision tree & random forest 
 
-## 4.KNN
+### 4.KNN
 
-## 5.K-means
+### 5.K-means
 
-## 6.bayesian(naive bayesian &&bayesian net)
+### 6.bayesian(naive bayesian &&bayesian net)
 
-## 7.神经网络
+### 7.cnn
 
-## 8.lstm
+### 8.rnn
+
+### 9.detection
+
