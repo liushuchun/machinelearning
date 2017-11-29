@@ -22,7 +22,7 @@ def vgg_block(num_convs, channels):
 def vgg_stack(architecture):
     out = nn.Sequential()
     for(num_convs, channels) in architecture:
-        out.add(vgg_stack(num_convs, channels))
+        out.add(vgg_block(num_convs, channels))
 
     return out
 
@@ -55,3 +55,7 @@ def main():
     trainer = gluon.Trainer(net.collect_params(), 'sgd', {
                             'learning_rate': 0.05})
     utils.train(train_data, test_data, net, loss, trainer, ctx, num_epochs=100)
+
+
+if __name__=="__main__":
+    main()
